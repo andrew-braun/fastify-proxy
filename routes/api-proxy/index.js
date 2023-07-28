@@ -9,13 +9,6 @@ export default async function apiProxyRoutes(server, options) {
 		reply.header("Access-Control-Allow-Methods", "GET")
 		reply.header("Access-Control-Allow-Headers", "*")
 
-		const isPreflight = /options/i.test(request.method)
-		if (isPreflight) {
-			return request.send(204)
-		}
-
-		console.log(request.headers)
-
 		const queryString = request.url.split("?")[1]
 
 		const response = await fetch(
