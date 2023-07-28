@@ -2,10 +2,7 @@ const routePrefix = "/api-proxy"
 
 export default async function apiProxyRoutes(server, options) {
 	server.get(`${routePrefix}/words-api`, async (request, reply) => {
-		reply.header(
-			"Access-Control-Allow-Origin",
-			"https://andrew-braun.github.io"
-		)
+		reply.header("Access-Control-Allow-Origin", "*")
 		reply.header("Access-Control-Allow-Methods", "GET")
 		reply.header("Access-Control-Allow-Headers", "*")
 
