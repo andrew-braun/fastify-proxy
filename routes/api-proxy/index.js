@@ -18,7 +18,7 @@ export default async function apiProxyRoutes(server, options) {
 		const data = await response.json()
 
 		return {
-			data: data,
+			data,
 		}
 	})
 }
