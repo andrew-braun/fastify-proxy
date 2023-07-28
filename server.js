@@ -1,5 +1,6 @@
 import Fastify from "fastify"
 import fastifyPlugin from "fastify-plugin"
+import cors from "@fastify/cors"
 import "dotenv/config"
 import indexRoutes from "./routes/index.js"
 import apiProxyRoutes from "./routes/api-proxy/index.js"
